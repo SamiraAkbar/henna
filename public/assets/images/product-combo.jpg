@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBF8F2"/>
+      <stop offset="50%" stop-color="#F5EFE4"/>
+      <stop offset="100%" stop-color="#EFE7D8"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#F4ECE1" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#E8DBC9" stop-opacity="0.2"/>
+    </radialGradient>
+    <pattern id="hennaPattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M30 5 C35 15 45 25 55 30 C45 35 35 45 30 55 C25 45 15 35 5 30 C15 25 25 15 30 5 Z" fill="none" stroke="#3D1E16" stroke-width="0.75" stroke-opacity="0.12"/>
+      <circle cx="30" cy="30" r="4" fill="none" stroke="#C9933E" stroke-width="0.75" stroke-opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  <rect width="800" height="600" fill="url(#sunGlow)"/>
+  <rect width="800" height="600" fill="url(#hennaPattern)"/>
+
+  <!-- Ornate Frame Border -->
+  <rect x="25" y="25" width="750" height="550" rx="16" fill="none" stroke="#3D1E16" stroke-width="1.5" stroke-opacity="0.3"/>
+  <rect x="35" y="35" width="730" height="530" rx="12" fill="none" stroke="#C9933E" stroke-width="0.8" stroke-opacity="0.5" stroke-dasharray="6,4"/>
+
+  <!-- Corner Flourishes -->
+  <g stroke="#3D1E16" stroke-width="1.2" fill="none" stroke-opacity="0.6">
+    <!-- Top Left -->
+    <path d="M35 65 C45 65 65 45 65 35"/>
+    <circle cx="50" cy="50" r="3" fill="#C9933E"/>
+    <!-- Top Right -->
+    <path d="M765 65 C755 65 735 45 735 35"/>
+    <circle cx="750" cy="50" r="3" fill="#C9933E"/>
+    <!-- Bottom Left -->
+    <path d="M35 535 C45 535 65 555 65 565"/>
+    <circle cx="50" cy="550" r="3" fill="#C9933E"/>
+    <!-- Bottom Right -->
+    <path d="M765 535 C755 535 735 555 735 565"/>
+    <circle cx="750" cy="550" r="3" fill="#C9933E"/>
+  </g>
+
+  <!-- Center Decorative Mandala / Hand Henna Motif -->
+  <g transform="translate(400, 260)">
+    <!-- Outer radiating ring -->
+    <circle cx="0" cy="0" r="140" fill="none" stroke="#C9933E" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="3,3"/>
+    <circle cx="0" cy="0" r="120" fill="none" stroke="#3D1E16" stroke-width="1.5" stroke-opacity="0.5"/>
+    <circle cx="0" cy="0" r="95" fill="#FAF5ED" stroke="#3D1E16" stroke-width="1.5" stroke-opacity="0.7"/>
+
+    <!-- 12 Petals -->
+    <g fill="#1B4332" fill-opacity="0.1" stroke="#3D1E16" stroke-width="1.4">
+      <path d="M0 -95 C15 -115 15 -135 0 -140 C-15 -135 -15 -115 0 -95 Z"/>
+      <path d="M0 95 C15 115 15 135 0 140 C-15 135 -15 115 0 95 Z"/>
+      <path d="M-95 0 C-115 15 -135 15 -140 0 C-135 -15 -115 -15 -95 0 Z"/>
+      <path d="M95 0 C115 15 135 15 140 0 C135 -15 115 -15 95 0 Z"/>
+      
+      <!-- Diagonals -->
+      <path d="M67 -67 C85 -75 95 -95 90 -105 C80 -100 60 -85 67 -67 Z"/>
+      <path d="M-67 -67 C-85 -75 -95 -95 -90 -105 C-80 -100 -60 -85 -67 -67 Z"/>
+      <path d="M67 67 C85 75 95 95 90 105 C80 100 60 85 67 67 Z"/>
+      <path d="M-67 67 C-85 75 -95 95 -90 105 C-80 100 -60 85 -67 67 Z"/>
+    </g>
+
+    <!-- Inner Paisley / Floral center -->
+    <circle cx="0" cy="0" r="60" fill="#F4ECE1" stroke="#C9933E" stroke-width="2"/>
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#3D1E16" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <circle cx="0" cy="0" r="16" fill="#3D1E16"/>
+    <circle cx="0" cy="0" r="8" fill="#C9933E"/>
+    
+    <!-- Small dots ring -->
+    <circle cx="0" cy="-28" r="3" fill="#1B4332"/>
+    <circle cx="28" cy="0" r="3" fill="#1B4332"/>
+    <circle cx="0" cy="28" r="3" fill="#1B4332"/>
+    <circle cx="-28" cy="0" r="3" fill="#1B4332"/>
+  </g>
+
+  <!-- Badge Top -->
+  <g transform="translate(400, 75)">
+    <rect x="-120" y="-16" width="240" height="32" rx="16" fill="#3D1E16" fill-opacity="0.9"/>
+    <text x="0" y="5" font-family="'Plus Jakarta Sans', sans-serif, system-ui" font-size="12" font-weight="700" fill="#FAF5ED" text-anchor="middle" letter-spacing="1.5">COMPLETE SET 🎁</text>
+  </g>
+
+  <!-- Titles and Descriptions Bottom -->
+  <text x="400" y="470" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="700" fill="#3D1E16" text-anchor="middle">Henna Lover's Artistry Combo</text>
+  <text x="400" y="505" font-family="'Plus Jakarta Sans', sans-serif, system-ui" font-size="16" font-weight="500" fill="#1B4332" text-anchor="middle">Cones + Powder + Essential Oil + Stencils</text>
+  <text x="400" y="535" font-family="'Plus Jakarta Sans', sans-serif, system-ui" font-size="12" font-style="italic" fill="#7D6254" text-anchor="middle">Replace with your photograph: assets/images/product-combo.jpg</text>
+</svg>

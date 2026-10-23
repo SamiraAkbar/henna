@@ -1,0 +1,208 @@
+/* ==========================================================================
+   Samira's Henna Artwork - Custom Styles
+   Brand Palette:
+   - Cream / Ivory Background: #FDFBF7, #FAF6EE
+   - Soft Sand / Beige: #F3EBDD, #EBE1CE
+   - Henna Brown: #3D1E16, #4A2518, #28120B
+   - Forest Green: #1B4332, #244E3B, #133324
+   - Muted Terracotta: #C86D51, #B25A3F
+   - Warm Amber Gold: #C9933E
+   ========================================================================== */
+
+/* Typography & Base */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-cream: #FDFBF7;
+  --color-cream-card: #FFFFFF;
+  --color-beige-light: #F7F2E9;
+  --color-beige-mid: #EFE7D8;
+  --color-sand: #E6DBC6;
+  --color-henna-dark: #2C140E;
+  --color-henna-main: #3D1E16;
+  --color-henna-light: #5A2E1F;
+  --color-forest: #1B4332;
+  --color-forest-light: #2D5A43;
+  --color-terracotta: #C86D51;
+  --color-gold: #C9933E;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  color: var(--color-henna-dark);
+  background-color: var(--color-cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Font Classes */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F2E9;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9CBB6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #BFAEA0;
+}
+
+/* Accessible Focus States */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--color-forest);
+  outline-offset: 3px;
+}
+
+/* Sticky Navigation Shadow & Backdrop */
+.header-scrolled {
+  background-color: rgba(253, 251, 247, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px -2px rgba(61, 30, 22, 0.06);
+}
+
+/* Subtle Botanical Floral Background Texture */
+.bg-botanical-pattern {
+  background-image: radial-gradient(circle at 10% 20%, rgba(200, 109, 81, 0.03) 0%, transparent 40%),
+                    radial-gradient(circle at 90% 80%, rgba(27, 67, 50, 0.04) 0%, transparent 45%);
+}
+
+/* Card Glow & Soft Shadows */
+.card-shadow {
+  box-shadow: 0 4px 24px -2px rgba(61, 30, 22, 0.06), 0 1px 3px 0 rgba(61, 30, 22, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-shadow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -4px rgba(61, 30, 22, 0.12), 0 2px 6px 0 rgba(61, 30, 22, 0.04);
+}
+
+/* Gallery Hover Overlay */
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: #F8F4EC;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px -4px rgba(61, 30, 22, 0.14);
+}
+
+.gallery-card img {
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.gallery-card:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-card .gallery-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: linear-gradient(to top, rgba(44, 20, 14, 0.88) 0%, rgba(44, 20, 14, 0.3) 60%, transparent 100%);
+}
+
+.gallery-card:hover .gallery-overlay {
+  opacity: 1;
+}
+
+/* Lightbox Modal Animation */
+#lightbox {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+#lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#lightbox .lightbox-content {
+  transform: scale(0.95);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#lightbox.active .lightbox-content {
+  transform: scale(1);
+}
+
+/* Floating WhatsApp Pulse */
+@keyframes softPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(27, 67, 50, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(27, 67, 50, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(27, 67, 50, 0);
+  }
+}
+
+.pulse-whatsapp {
+  animation: softPulse 2.5s infinite;
+}
+
+/* Quantity Selector Input */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* FAQ Accordion Styling */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+}
+
+.faq-item.open .faq-answer {
+  max-height: 500px;
+  transition: max-height 0.35s ease-in-out;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* Mobile Navigation Drawer */
+#mobile-menu {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
