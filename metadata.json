@@ -2,5 +2,4 @@
   "name": "Samira's Henna Artwork",
   "description": "Handmade henna art portfolio and organic henna products showcase with direct WhatsApp ordering.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
